@@ -10,12 +10,14 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print("We are ready to rol out".format(client))
-
-
-@client.event
-async def on_ready():
-    await client.change_presence(activity=discord.Game('MAGIJOS MINISTERIJA VIRS MANES'))
    
+    @client.event
+async def on_ready():
+    await client.change_presence(activity=discord.Streaming(name='MAGIJOS MINISTERIJA VIRS MANES', url='https://www.twitch.tv/your_channel_here'))
+    
+    print('Connected to bot: {}'.format(client.user.name))
+    print('Bot ID: {}'.format(client.user.id))
+    
     
     print('Connected to bot: {}'.format(client.user.name))
     print('Bot ID: {}'.format(client.user.id))
@@ -29,4 +31,9 @@ async def on_message(message):
 
 client.run(os.getenv('TOKEN'))
 
-
+@client.event
+async def on_ready():
+    await client.change_presence(activity=discord.Streaming(name='Sea of Thieves', url='https://www.twitch.tv/your_channel_here'))
+    
+    print('Connected to bot: {}'.format(client.user.name))
+    print('Bot ID: {}'.format(client.user.id))
