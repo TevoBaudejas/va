@@ -10,12 +10,10 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print("We are ready to rol out".format(client))
-
-
-@client.event
-async def on_ready():
-    await client.change_presence(activity=discord.Game('🧙🏻MAGIJOS MINISTERIJA VIRŠ MANĘS🧙🏻'))
     
+# Setting `Watching ` status
+await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="🧙🏻MAGIJOS MINISTERIJA VIRŠ MANĘS🧙"))
+
     print('Connected to bot: {}'.format(client.user.name))
     print('Bot ID: {}'.format(client.user.id))
 
