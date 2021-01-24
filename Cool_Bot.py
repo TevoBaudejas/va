@@ -14,7 +14,7 @@ async def on_ready():
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Game('🧙🏻MAGIJOS MINISTERIJA VIRŠ MANĘS🧙'))
+    await client.change_presence(activity=discord.Watching('🧙🏻MAGIJOS MINISTERIJA VIRŠ MANĘS🧙'))
     
     print('Connected to bot: {}'.format(client.user.name))
     print('Bot ID: {}'.format(client.user.id))
