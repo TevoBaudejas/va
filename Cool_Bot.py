@@ -30,10 +30,3 @@ async def on_message(message):
         await message.channel.send("Hey there buddy!")
 
 client.run(os.getenv('TOKEN'))
-
-@client.event
-async def on_ready():
-    await client.change_presence(activity=discord.Streaming(name='Sea of Thieves', url='https://www.twitch.tv/your_channel_here'))
-    
-    print('Connected to bot: {}'.format(client.user.name))
-    print('Bot ID: {}'.format(client.user.id))
