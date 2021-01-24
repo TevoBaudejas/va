@@ -14,7 +14,7 @@ async def on_ready():
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Watching('🧙🏻MAGIJOS MINISTERIJA VIRŠ MANĘS🧙'))
+    await client.change_presence(activity=discord.Game('🧙🏻MAGIJOS MINISTERIJA VIRŠ MANĘS🧙'))
     
     print('Connected to bot: {}'.format(client.user.name))
     print('Bot ID: {}'.format(client.user.id))
@@ -23,8 +23,9 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-    if message.content.startswith("%hello"):
-        await message.channel.send("Hey there buddy!")
+    if message.content.startswith("/mininfo"):
+        await message.channel.send("``` 
+TESTUOJU```")
         
 client.run(os.getenv('TOKEN'))
 
