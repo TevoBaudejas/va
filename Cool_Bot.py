@@ -14,7 +14,7 @@ async def on_ready():
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Game('MAGIJOS MINISTERIJA VIRS MANES'; 'OMG'))
+    await client.change_presence(activity=discord.Game('MAGIJOS MINISTERIJA VIRS MANES'))
    
     
     print('Connected to bot: {}'.format(client.user.name))
